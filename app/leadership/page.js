@@ -8,7 +8,7 @@ export const metadata = {
 
 const PRESIDENT = {
   name: "Lt Col Neih McMillan Mancho",
-  photo: "/photos/president.jpg",
+  photo: "https://res.cloudinary.com/dksshweet/image/upload/v1778866800/president_h2lnxd.jpg",
   bio: "A distinguished leader and founding member of NCACS, Lt Col Neih McMillan Mancho brings military discipline, vision, and deep commitment to the Ngemba community in Colorado Springs. As President he provides overall strategic direction, presides over all meetings, and represents NCACS in all external matters. His leadership is rooted in service, unity, and the preservation of Ngemba cultural heritage.",
   duties: [
     "Provide overall strategic direction for the Association",
@@ -20,7 +20,7 @@ const PRESIDENT = {
 
 const VICE_PRESIDENT = {
   name: "Dr. Linus Akamangwa",
-  photo: "/photos/vice-president.jpg",
+  photo: "https://res.cloudinary.com/dksshweet/image/upload/v1778866721/vice-president_cq7y4u.jpg",
   bio: "A founding member and respected scholar, Dr. Linus Akamangwa serves as the second in command of NCACS. He assists the President in all duties, assumes presidential responsibilities in his absence, and oversees special projects and initiatives. His dedication to education and community empowerment reflects the core values of NCACS.",
   duties: [
     "Assist the President in carrying out the duties of the office",
@@ -32,7 +32,7 @@ const VICE_PRESIDENT = {
 
 const SOCIAL_SECRETARY = {
   name: "Mr. Clement Awahmukalah",
-  photo: "/photos/social-secretary.jpeg",
+  photo: "https://res.cloudinary.com/dksshweet/image/upload/v1778866778/social-secretary_umhymu.jpg",
   bio: "A founding member of NCACS, Mr. Clement Awahmukalah is the heartbeat of our social life. He plans and organizes all social events and activities, fosters a welcoming atmosphere for all members, and maintains the hosting schedule. His warmth and dedication ensure every gathering feels like family.",
   duties: [
     "Plan and organize all NCACS social events and activities",
@@ -56,7 +56,7 @@ const PROTOCOL_OFFICER = {
 
 const FOUNDING_BIH_MANCHO = {
   name: "Mrs. Bih Mancho",
-  photo: "/photos/founding-bih-mancho.jpg",
+  photo: "https://res.cloudinary.com/dksshweet/image/upload/v1778866830/founding-bih-mancho_jqe1mz.jpg",
   bio: "A proud founding member of NCACS, Mrs. Bih Mancho has been instrumental in establishing the Association's foundation in Colorado Springs. Her dedication to Ngemba culture, family values, and community unity is an inspiration to all members.",
   duties: [
     "Uphold the founding vision and values of NCACS",
@@ -77,7 +77,7 @@ const FOUNDING_OLIVER_CHEFOR = {
 
 const FOUNDING_ETONDE_AKAMANGWA = {
   name: "Mrs. Etonde Akamangwa",
-  photo: "/photos/founding-etonde-akamangwa.jpg",
+  photo: "https://res.cloudinary.com/dksshweet/image/upload/v1778964462/founding-etonde-akamangwa_aambkv.jpg",
   bio: "A founding member of NCACS, Mrs. Etonde Akamangwa exemplifies the strength and grace of Ngemba women. Her dedication to cultural preservation, community building, and the empowerment of Ngemba families in Colorado Springs is deeply valued by the entire Association.",
   duties: [
     "Uphold the founding vision and values of NCACS",
@@ -103,7 +103,7 @@ const OFFICERS = [
   { ...SOCIAL_SECRETARY, title: "Social Secretary" },
   { name: "To be announced", title: "Assistant Social Secretary" },
   { ...PROTOCOL_OFFICER, title: "Protocol Officer" },
-  { name: "To be announced", title: "Cultural Officer", photo: "/photos/cultural-officer.jpg" },
+  { name: "To be announced", title: "Cultural Officer", photo: "https://res.cloudinary.com/dksshweet/image/upload/v1778866839/cultural-officer_fscjmv.jpg" },
   { name: "To be announced", title: "Public Relations Officer" },
   { name: "To be announced", title: "Auditor" },
 ];

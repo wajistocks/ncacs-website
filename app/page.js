@@ -7,11 +7,12 @@ export const metadata = {
 };
 
 const COMMUNITY_PHOTOS = [
-  { src: "/photos/community2.jpg", caption: "Community gathering" },
-  { src: "/photos/community3.jpg", caption: "Cultural celebration" },
-  { src: "/photos/community5.jpg", caption: "Honoring our heritage" },
-  { src: "/photos/community6.jpg", caption: "Family unity" },
-  { src: "/photos/community7.jpg", caption: "Members in traditional attire" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964451/community2_f7jdlm.jpg", caption: "Community gathering" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964455/community3_vycprv.jpg", caption: "Cultural celebration" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964452/community6_h41car.jpg", caption: "Family unity" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964454/community8_corcy9.jpg", caption: "Traditional dance" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964456/community12_wijh2n.jpg", caption: "Members together" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964717/community21_rfp7lp.jpg", caption: "Celebrating heritage" },
 ];
 
 const UPCOMING_EVENTS = [
@@ -47,7 +48,7 @@ export default function Home() {
         <div className="hero-toghu bottom" aria-hidden="true" />
         <div className="hero-inner">
           <img
-            src="/photos/logo.JPG"
+            src="https://res.cloudinary.com/dksshweet/image/upload/v1778866815/logo_cyurqz.jpg"
             alt="NCACS logo"
             className="hero-logo"
           />

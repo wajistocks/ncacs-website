@@ -33,7 +33,7 @@ export default function Nav() {
     <header className="nav">
       <div className="container nav-inner">
         <Link href="/" className="nav-logo" aria-label="NCACS home">
-          <img src="/photos/logo.JPG" alt="NCACS logo" className="nav-logo-img" />
+          <img src="https://res.cloudinary.com/dksshweet/image/upload/v1778866815/logo_cyurqz.jpg" alt="NCACS logo" className="nav-logo-img" />
           <span className="nav-logo-text">NCACS</span>
         </Link>
 

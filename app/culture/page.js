@@ -5,12 +5,12 @@ export const metadata = {
 };
 
 const CULTURE_PHOTOS = [
-  { src: "/photos/community8.jpg", caption: "Traditional dance" },
-  { src: "/photos/community9.jpg", caption: "Royal attire" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964454/community8_corcy9.jpg", caption: "Traditional dance" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964454/community9_avoruu.jpg", caption: "Royal attire" },
   { src: "/photos/community10.jpg", caption: "Community elders" },
-  { src: "/photos/community11.jpg", caption: "Cultural ceremony" },
-  { src: "/photos/community13.jpeg", caption: "Drumming and song" },
-  { src: "/photos/community14.jpeg", caption: "In our colors" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964455/community11_ckvr53.jpg", caption: "Cultural ceremony" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964457/community13_yafkfb.jpg", caption: "Drumming and song" },
+  { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964458/community14_jgm5tt.jpg", caption: "In our colors" },
 ];
 
 export default function CulturePage() {
@@ -120,7 +120,7 @@ export default function CulturePage() {
             <div className="notable-image-wrap">
               <span className="photo-badge">Portrait of a Ngemba Notable</span>
               <img
-                src="/photos/notable.jpg"
+                src="https://res.cloudinary.com/dksshweet/image/upload/v1778866807/notable_op0dxk.jpg"
                 alt="Portrait of a Ngemba Notable in full traditional Toghu regalia"
                 loading="lazy"
               />

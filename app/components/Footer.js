@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <img src="/photos/logo.JPG" alt="NCACS logo" />
+              <img src="https://res.cloudinary.com/dksshweet/image/upload/v1778866815/logo_cyurqz.jpg" alt="NCACS logo" />
               <div>
                 <div className="footer-brand-text">NCACS</div>
                 <div style={{ color: "var(--gold)", fontSize: "0.8rem", letterSpacing: "0.1em" }}>Est. 2025</div>
