@@ -43,15 +43,15 @@ export default function Footer() {
             <h4>Contact</h4>
             <ul>
               <li style={{ color: "var(--text-soft)" }}>Colorado Springs, CO</li>
-              <li><a href="mailto:hello@ncacs.org">hello@ncacs.org</a></li>
-              <li><a href="#" aria-label="Facebook">Facebook</a></li>
-              <li><a href="#" aria-label="Instagram">Instagram</a></li>
+              <li><a href="mailto:ngembaassociationcos@gmail.com" style={{ overflowWrap: "anywhere" }}>ngembaassociationcos@gmail.com</a></li>
+              <li><a href="https://www.facebook.com/share/1bopkRNxms/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/ngembaculturalassoc" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          © 2025 Ngemba Cultural Association of Colorado Springs. All rights reserved.
+          © 2026 Ngemba Cultural Association of Colorado Springs. All rights reserved.
         </div>
       </div>
     </footer>

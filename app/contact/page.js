@@ -87,14 +87,14 @@ export default function ContactPage() {
               <article className="card" style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: 12 }}>✉️</div>
                 <h3>General Inquiries</h3>
-                <p><a href="mailto:hello@ncacs.org" style={{ color: "var(--gold)" }}>hello@ncacs.org</a></p>
+                <p><a href="mailto:ngembaassociationcos@gmail.com" style={{ color: "var(--gold)", overflowWrap: "anywhere" }}>ngembaassociationcos@gmail.com</a></p>
               </article>
               <article className="card" style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: 12 }}>🌐</div>
                 <h3>Find Us Online</h3>
                 <p>
-                  <a href="#" style={{ color: "var(--gold)", marginRight: 16 }}>Facebook</a>
-                  <a href="#" style={{ color: "var(--gold)" }}>Instagram</a>
+                  <a href="https://www.facebook.com/share/1bopkRNxms/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)", marginRight: 16 }}>Facebook</a>
+                  <a href="https://www.instagram.com/ngembaculturalassoc" target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)" }}>Instagram</a>
                 </p>
               </article>
             </div>
