@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DonateButton from "./components/DonateButton";
 
 export const metadata = {
   title: "NCACS — Ngemba Cultural Association of Colorado Springs",
@@ -202,7 +203,7 @@ export default function Home() {
             </p>
             <div className="flex-buttons">
               <Link href="/membership" className="btn btn-primary">Become a Member</Link>
-              <Link href="/give" className="btn btn-gold">Make a Donation</Link>
+              <DonateButton className="btn btn-gold">Make a Donation</DonateButton>
             </div>
           </div>
         </div>
