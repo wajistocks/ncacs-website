@@ -15,7 +15,7 @@ const TIERS = [
       "Eligible to hold office",
       "Member care during celebrations and bereavements",
       "Invitations to all member events",
-      "Mandatory attendance at End of Year Celebration",
+      "Mandatory attendance at End of Year Cultural Night",
       "Participation in charitable engagements",
     ],
   },

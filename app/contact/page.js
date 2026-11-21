@@ -23,7 +23,7 @@ const FAQS = [
   },
   {
     q: "Can my family attend events?",
-    a: "Absolutely. Many of our cultural events, the Annual Cultural Celebration, family picnics, and the End of Year Celebration are explicitly family-oriented. Children and spouses are always welcome.",
+    a: "Absolutely. Many of our cultural events, the Annual Cultural Celebration, family picnics, and the End of Year Cultural Night are explicitly family-oriented. Children and spouses are always welcome.",
   },
   {
     q: "How are donations used?",
