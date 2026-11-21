@@ -1,9 +1,9 @@
-import Link from "next/link";
+import DonateButton from "./DonateButton";
 
 export default function FloatingDonate() {
   return (
-    <Link href="/give" className="floating-donate" aria-label="Donate now">
+    <DonateButton className="floating-donate" aria-label="Donate now">
       <span aria-hidden="true">♥</span> Donate
-    </Link>
+    </DonateButton>
   );
 }

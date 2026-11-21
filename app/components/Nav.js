@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import DonateButton from "./DonateButton";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -45,12 +46,10 @@ export default function Nav() {
               </li>
             ))}
             <li>
-              <Link href="/give" className="nav-donate desktop-only">Donate</Link>
+              <DonateButton className="nav-donate desktop-only">Donate</DonateButton>
             </li>
           </ul>
         </nav>
-
-        <Link href="/give" className="nav-donate" style={{ display: "none" }}>Donate</Link>
 
         <button
           className={`nav-toggle ${open ? "open" : ""}`}
@@ -70,7 +69,7 @@ export default function Nav() {
         {LINKS.map((l) => (
           <Link key={l.href} href={l.href}>{l.label}</Link>
         ))}
-        <Link href="/give" className="nav-donate">Donate</Link>
+        <DonateButton className="nav-donate" onClick={() => setOpen(false)}>Donate</DonateButton>
       </aside>
     </header>
   );

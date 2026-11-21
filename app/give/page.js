@@ -1,3 +1,5 @@
+import DonateButton from "../components/DonateButton";
+
 export const metadata = {
   title: "Give",
   description:
@@ -50,24 +52,18 @@ export default function GivePage() {
               the charitable and cultural work of NCACS.
             </p>
             <div className="flex-buttons">
-              <a
-                href="https://donate.stripe.com/placeholder"
+              <DonateButton
                 className="btn btn-gold"
                 style={{ fontSize: "1.05rem", padding: "16px 36px" }}
-                rel="noopener noreferrer"
               >
                 ♥ Donate Now
-              </a>
-              <a
-                href="https://donate.stripe.com/placeholder"
-                className="btn btn-outline"
-                rel="noopener noreferrer"
-              >
+              </DonateButton>
+              <DonateButton monthly className="btn btn-outline">
                 Give Monthly
-              </a>
+              </DonateButton>
             </div>
             <p style={{ marginTop: 24, color: "var(--text-muted)", fontSize: "0.9rem" }}>
-              Secure giving powered by Stripe.
+              Give by Zelle or Cash App. Thank you for supporting NCACS.
             </p>
           </div>
         </div>
@@ -133,13 +129,7 @@ export default function GivePage() {
           </article>
 
           <div style={{ textAlign: "center", marginTop: 40 }}>
-            <a
-              href="https://donate.stripe.com/placeholder"
-              className="btn btn-gold"
-              rel="noopener noreferrer"
-            >
-              Make a Gift
-            </a>
+            <DonateButton className="btn btn-gold">Make a Gift</DonateButton>
           </div>
         </div>
       </section>

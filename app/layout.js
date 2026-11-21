@@ -2,6 +2,7 @@ import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import FloatingDonate from "./components/FloatingDonate";
+import { DonateProvider } from "./components/DonateContext";
 
 export const metadata = {
   metadataBase: new URL("https://ncacs.org"),
@@ -48,10 +49,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Nav />
-        <main>{children}</main>
-        <FloatingDonate />
-        <Footer />
+        <DonateProvider>
+          <Nav />
+          <main>{children}</main>
+          <FloatingDonate />
+          <Footer />
+        </DonateProvider>
       </body>
     </html>
   );
