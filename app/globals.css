@@ -1751,3 +1751,141 @@ button.nav-donate {
     animation: none;
   }
 }
+
+/* ============ 2026 Events ============ */
+.event-date-year {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-top: 4px;
+}
+
+.event-card {
+  scroll-margin-top: 96px;
+}
+
+.event-card-link {
+  color: inherit;
+}
+
+.event-card-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.event-more {
+  color: var(--orange);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.event-card-link:hover .event-more {
+  color: var(--orange-hover);
+}
+
+.event-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.event-body p.event-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text);
+}
+
+.event-location {
+  display: flex;
+  gap: 8px;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  margin-bottom: 16px;
+}
+
+.event-location strong {
+  color: var(--text);
+}
+
+.event-tickets {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.event-tickets h4 {
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.event-tickets ul {
+  list-style: none;
+}
+
+.event-tickets li {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.event-tickets li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.event-ticket-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.event-ticket-price {
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.1rem;
+}
+
+.event-ticket-detail {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
+.event-body p.event-dress {
+  color: var(--text-soft);
+}
+
+.event-dress strong {
+  color: var(--text);
+}
+
+.event-flyer {
+  display: block;
+  max-width: 420px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.event-flyer img {
+  width: 100%;
+  height: auto;
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 560px) {
+  .event-flyer {
+    max-width: none;
+  }
+  .event-actions .btn {
+    flex: 1 1 100%;
+  }
+}

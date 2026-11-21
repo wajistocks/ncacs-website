@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EVENTS_2026 } from "./events/eventsData";
 import DonateButton from "./components/DonateButton";
 
 export const metadata = {
@@ -14,30 +15,6 @@ const COMMUNITY_PHOTOS = [
   { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964454/community8_corcy9.jpg", caption: "Traditional dance" },
   { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964456/community12_wijh2n.jpg", caption: "Members together" },
   { src: "https://res.cloudinary.com/dksshweet/image/upload/v1778964717/community21_rfp7lp.jpg", caption: "Celebrating heritage" },
-];
-
-const UPCOMING_EVENTS = [
-  {
-    day: "07",
-    month: "Jun",
-    title: "Monthly General Meeting",
-    meta: "Saturday • 2:00 PM • Colorado Springs",
-    body: "Our monthly gathering for members and prospective members to connect, plan, and grow together.",
-  },
-  {
-    day: "16",
-    month: "Aug",
-    title: "Annual Cultural Celebration",
-    meta: "Saturday • All Day • Colorado Springs",
-    body: "A vibrant celebration of Ngemba heritage with food, music, dance, and the splendor of traditional attire.",
-  },
-  {
-    day: "20",
-    month: "Dec",
-    title: "End of Year Celebration",
-    meta: "Saturday Evening • Members and Family",
-    body: "Our annual end-of-year gathering — mandatory for all members. A night of reflection, joy, and community.",
-  },
 ];
 
 export default function Home() {
@@ -169,18 +146,20 @@ export default function Home() {
           </div>
 
           <div className="grid" style={{ gap: 16 }}>
-            {UPCOMING_EVENTS.map((e, i) => (
-              <article className="event-card" key={i}>
+            {EVENTS_2026.map((e) => (
+              <Link href={`/events#${e.id}`} className="event-card event-card-link" key={e.id}>
                 <div className="event-date">
                   <div className="event-date-day">{e.day}</div>
                   <div className="event-date-month">{e.month}</div>
+                  <div className="event-date-year">{e.year}</div>
                 </div>
                 <div className="event-body">
                   <h3>{e.title}</h3>
                   <div className="event-meta">{e.meta}</div>
-                  <p>{e.body}</p>
+                  <p>{e.summary}</p>
+                  <span className="event-more">View event details →</span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
 
