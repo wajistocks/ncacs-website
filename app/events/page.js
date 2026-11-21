@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import Link from "next/link";
-import { EVENTS_2026, FLYER_SRC } from "./eventsData";
+import { FLYER_SRC } from "./eventsData";
+import EventsCalendar from "./EventsCalendar";
 
 export const metadata = {
   title: "Events",
@@ -10,8 +10,6 @@ export const metadata = {
 };
 
 const FLYER_AVAILABLE = fs.existsSync(path.join(process.cwd(), "public", FLYER_SRC));
-
-const smallBtn = { minHeight: 40, padding: "8px 20px", fontSize: 14 };
 
 export default function EventsPage() {
   return (
@@ -80,92 +78,7 @@ export default function EventsPage() {
             <h2 className="section-title center">2026 Calendar</h2>
           </div>
 
-          <div className="grid" style={{ gap: 16 }}>
-            {EVENTS_2026.map((e) => (
-              <article className="event-card" key={e.id} id={e.id}>
-                <div className="event-date">
-                  <div className="event-date-day">{e.day}</div>
-                  <div className="event-date-month">{e.month}</div>
-                  <div className="event-date-year">{e.year}</div>
-                </div>
-                <div className="event-body">
-                  <h3>{e.title}</h3>
-                  <div className="event-meta">{e.meta}</div>
-                  {e.tagline && <p className="event-tagline">{e.tagline}</p>}
-                  {e.body && <p>{e.body}</p>}
-
-                  <div className="event-location">
-                    <span aria-hidden="true">📍</span>
-                    <span>
-                      <strong>{e.venue}</strong>
-                      <br />
-                      {e.address}
-                    </span>
-                  </div>
-
-                  {e.tickets && (
-                    <div className="event-tickets">
-                      <h4>Tickets</h4>
-                      <ul>
-                        {e.tickets.map((t) => (
-                          <li key={t.name}>
-                            <div className="event-ticket-head">
-                              <span>{t.name}</span>
-                              <span className="event-ticket-price">{t.price}</span>
-                            </div>
-                            <div className="event-ticket-detail">{t.detail}</div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {e.dressCode && (
-                    <p className="event-dress">
-                      <strong>Dress code:</strong> {e.dressCode}
-                    </p>
-                  )}
-
-                  {e.hasFlyer && FLYER_AVAILABLE && (
-                    <a href={FLYER_SRC} target="_blank" rel="noopener noreferrer" className="event-flyer">
-                      <img
-                        src={FLYER_SRC}
-                        alt={`${e.title} flyer`}
-                        loading="lazy"
-                      />
-                    </a>
-                  )}
-
-                  <div className="event-actions">
-                    <a
-                      href={e.directions}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-outline"
-                      style={smallBtn}
-                    >
-                      Get Directions
-                    </a>
-                    {e.hasFlyer && FLYER_AVAILABLE && (
-                      <a
-                        href={FLYER_SRC}
-                        download="NCACS-End-of-Year-Cultural-Night-Flyer.jpg"
-                        className="btn btn-outline"
-                        style={smallBtn}
-                      >
-                        Download Flyer
-                      </a>
-                    )}
-                    {e.ticketsCta && (
-                      <Link href="/contact" className="btn btn-gold" style={smallBtn}>
-                        Contact Us for Tickets
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <EventsCalendar flyerAvailable={FLYER_AVAILABLE} />
         </div>
       </section>
     </>

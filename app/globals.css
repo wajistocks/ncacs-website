@@ -1764,25 +1764,6 @@ button.nav-donate {
   scroll-margin-top: 96px;
 }
 
-.event-card-link {
-  color: inherit;
-}
-
-.event-card-link:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-}
-
-.event-more {
-  color: var(--orange);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.event-card-link:hover .event-more {
-  color: var(--orange-hover);
-}
-
 .event-body {
   min-width: 0;
   flex: 1;
@@ -1887,5 +1868,213 @@ button.nav-donate {
   }
   .event-actions .btn {
     flex: 1 1 100%;
+  }
+}
+
+/* ============ Announcement Bar ============ */
+.announcement-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 6px;
+  padding: 8px 16px;
+  background: var(--gold);
+  color: #1a1a1a;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  text-align: center;
+  position: relative;
+  z-index: 101;
+}
+
+.announcement-bar:hover .announcement-cta,
+.announcement-bar:focus-visible .announcement-cta {
+  text-decoration: underline;
+}
+
+.announcement-bar:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: -4px;
+}
+
+.announcement-cta {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .announcement-bar {
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.82rem;
+  }
+  .announcement-dash {
+    display: none;
+  }
+}
+
+/* ============ Next Events (home) ============ */
+.next-events {
+  background:
+    radial-gradient(ellipse at center top, rgba(212, 168, 67, 0.08), transparent 60%),
+    #0c0c0c;
+  border-bottom: 1px solid var(--border);
+}
+
+.next-events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.next-events-grid.single {
+  grid-template-columns: minmax(0, 620px);
+  justify-content: center;
+}
+
+.next-event-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.next-event-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.next-event-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.next-event-date {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  min-width: 104px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: linear-gradient(160deg, rgba(196, 98, 45, 0.25), rgba(212, 168, 67, 0.12));
+  border: 1px solid rgba(212, 168, 67, 0.4);
+  line-height: 1;
+}
+
+.next-event-month {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.next-event-day {
+  font-family: var(--serif);
+  font-size: 3.2rem;
+  color: var(--text);
+  margin: 6px 0;
+}
+
+.next-event-year {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--text-soft);
+}
+
+.next-event-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.next-event-body h3 {
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
+  margin-bottom: 12px;
+}
+
+.next-event-when {
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.next-event-where {
+  display: flex;
+  gap: 8px;
+  color: var(--text-soft);
+  margin-bottom: 12px;
+}
+
+.next-event-where strong {
+  color: var(--text);
+}
+
+.next-event-note {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.next-event-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.next-event-card:hover .next-event-btn {
+  background: var(--gold-hover);
+}
+
+@media (max-width: 760px) {
+  .next-events-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .next-event-card {
+    padding: 24px 20px;
+  }
+  .next-event-btn {
+    align-self: stretch;
+  }
+}
+
+.events-empty {
+  text-align: center;
+  color: var(--text-soft);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  padding: 24px 0;
+}
+
+/* ============ Event highlight (Events page) ============ */
+.event-card.is-highlighted {
+  animation: event-highlight 2.4s ease;
+}
+
+@keyframes event-highlight {
+  0%, 35% {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.45), 0 0 32px rgba(212, 168, 67, 0.25);
+  }
+  100% {
+    border-color: var(--border);
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-card.is-highlighted {
+    animation: none;
+    border-color: var(--gold);
+  }
+  .next-event-card:hover {
+    transform: none;
   }
 }

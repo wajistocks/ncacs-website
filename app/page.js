@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EVENTS_2026 } from "./events/eventsData";
+import NextEvents from "./components/NextEvents";
 import DonateButton from "./components/DonateButton";
 
 export const metadata = {
@@ -42,6 +42,9 @@ export default function Home() {
           <div className="hero-meta">Established 2025 — Colorado Springs, Colorado</div>
         </div>
       </section>
+
+      {/* Next events */}
+      <NextEvents />
 
       {/* Welcome */}
       <section id="welcome" className="section">
@@ -133,38 +136,6 @@ export default function Home() {
 
           <div style={{ textAlign: "center", marginTop: 32 }}>
             <Link href="/gallery" className="btn btn-outline">View Full Gallery</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events */}
-      <section className="section" style={{ background: "#0c0c0c" }}>
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <span className="eyebrow">Upcoming</span>
-            <h2 className="section-title center">Events &amp; Gatherings</h2>
-          </div>
-
-          <div className="grid" style={{ gap: 16 }}>
-            {EVENTS_2026.map((e) => (
-              <Link href={`/events#${e.id}`} className="event-card event-card-link" key={e.id}>
-                <div className="event-date">
-                  <div className="event-date-day">{e.day}</div>
-                  <div className="event-date-month">{e.month}</div>
-                  <div className="event-date-year">{e.year}</div>
-                </div>
-                <div className="event-body">
-                  <h3>{e.title}</h3>
-                  <div className="event-meta">{e.meta}</div>
-                  <p>{e.summary}</p>
-                  <span className="event-more">View event details →</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 32 }}>
-            <Link href="/events" className="btn btn-outline">See All Events</Link>
           </div>
         </div>
       </section>

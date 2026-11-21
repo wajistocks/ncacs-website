@@ -8,6 +8,12 @@ export const FLYER_SRC = "/images/cultural-night-flyer.jpg";
 export const EVENTS_2026 = [
   {
     id: "hot-meals-outreach",
+    // Hidden after the end of the event day (Mountain Time).
+    endsAt: "2026-11-26T23:59:59-07:00",
+    weekday: "Thursday",
+    shortLabel: "Hot Meals Outreach, Nov 26",
+    time: "11:00 AM",
+    note: "In partnership with Caring Matters Industries",
     day: "26",
     month: "Nov",
     year: "2026",
@@ -20,7 +26,12 @@ export const EVENTS_2026 = [
     summary: "Serving hot meals to people in need with Caring Matters Industries at Sanctuary Church.",
   },
   {
-    id: "end-of-year-cultural-night",
+    id: "cultural-night",
+    endsAt: "2026-12-05T23:59:59-07:00",
+    weekday: "Saturday",
+    shortLabel: "End of Year Cultural Night, Dec 5",
+    time: "6:00 PM MST",
+    note: "Tickets from $25 · Traditional Wear",
     day: "05",
     month: "Dec",
     year: "2026",
@@ -49,3 +60,7 @@ export const EVENTS_2026 = [
     ticketsCta: true,
   },
 ];
+
+export function upcomingEvents(now = Date.now()) {
+  return EVENTS_2026.filter((e) => new Date(e.endsAt).getTime() >= now);
+}

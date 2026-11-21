@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "./components/Nav";
+import AnnouncementBar from "./components/AnnouncementBar";
 import Footer from "./components/Footer";
 import FloatingDonate from "./components/FloatingDonate";
 import { DonateProvider } from "./components/DonateContext";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <DonateProvider>
+          <AnnouncementBar />
           <Nav />
           <main>{children}</main>
           <FloatingDonate />
